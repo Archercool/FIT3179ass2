@@ -1,0 +1,86 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Global Temperature bubble plot",
+    "data": {
+      "url": "GlobalWeatherRepository.csv"
+    },
+    "params": [
+      {
+        "name": "Temperature_Above",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": -30,
+          "max": 50,
+          "step": 1,
+          "name": "Minimum Temperature: "
+        }
+      },
+      {
+        "name": "Month_selection",
+        "bind": {
+          "input": "select",
+          "options": ["May", "June", "July", "August", "September", null],
+          "labels": ["May", "June", "July", "August", "September", "Show All"],
+          "name": "Month Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "calculate": "timeFormat(toDate(datum.last_updated, '%Y/%m/%d %H:%M:%S'), '%B')",
+        "as": "Month"
+      },
+      {"filter": "datum.temperature_celsius > Temperature_Above"},
+      {
+        "filter": "Month_selection == null || datum.Month == Month_selection"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "longitude",
+        "type": "quantitative",
+        "title": "Longitude"
+      },
+      "y": {
+        "field": "latitude",
+        "type": "quantitative",
+        "title": "Latitude"
+      }
+    },
+    "layer": [
+      {
+        "mark": "circle",
+        "encoding": {
+          "size": {
+            "field": "temperature_celsius",
+            "type": "quantitative",
+            "scale": {
+              "type": "threshold",
+              "domain": [0, 10, 20, 30, 40],
+              "range": [10, 50, 100, 150, 200, 250]
+            },
+            "legend": {"title": "Temperature (°C)"}
+          },
+          "color": {
+            "field": "temperature_celsius",
+            "type": "quantitative",
+            "scale": {
+              "scheme": "redyellowblue",
+              "domain": [-30, 50],
+              "reverse": true
+            }
+          },
+          "opacity": {"value": 0.6},
+          "tooltip": [
+            {"field": "location_name", "type": "nominal", "title": "Location"},
+            {"field": "temperature_celsius", "type": "quantitative", "format": ".2f", "title": "Temperature (°C)"},
+            {"field": "Month", "type": "nominal", "title": "Month"}
+          ]
+        }
+      }
+    ]
+  }
+  
