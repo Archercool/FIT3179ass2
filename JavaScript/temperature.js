@@ -1,3 +1,23 @@
+// Function to create a "Return to Homepage" button and add it to the top right corner of the page
+function addReturnToHomeButton() {
+    var buttonContainer = document.createElement('div');
+    buttonContainer.className = 'home-button-container';  // Add a class for styling
+    var homeButton = document.createElement('button');
+    homeButton.className = 'home-button';
+    homeButton.innerHTML = 'Homepage';
+
+    // Define the action when the button is clicked
+    homeButton.onclick = function() {
+        window.location.href = 'index.html';  // Change this URL to your homepage URL
+    };
+
+    buttonContainer.appendChild(homeButton);
+    document.body.appendChild(buttonContainer);  // Append the button to the body
+}
+
+// Call the function to add the button
+addReturnToHomeButton();
+
 // Add text content to the body
 var textContent = document.createElement('div');
 textContent.id = 'text-content';
