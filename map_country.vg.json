@@ -7,7 +7,7 @@
   "layer": [
     {
       "data": {
-        "url": "map.json",
+        "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/map.json",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "mark": {
