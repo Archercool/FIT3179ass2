@@ -1,0 +1,49 @@
+/* styles.css */
+
+/* Style for the text content at the top */
+#text-content {
+    text-align: center;
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 10px;
+    background-color: #f4f4f4; /* Optional: Different background color */
+    width: 100%; /* Use full width */
+}
+
+/* Layout for the top two visualizations */
+#top-row {
+    display: flex;
+    justify-content: space-around; /* Space between the two charts */
+    margin-bottom: 20px; /* Space below for heatmap */
+    width: 100%;
+}
+
+/* Each visualization for the top row */
+.viz {
+    width: 45%; /* Set width for Map and Bubble Plot */
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+}
+
+/* Heatmap and Scatter Plot side by side */
+#bottom-row {
+    display: flex;
+    justify-content: space-around; /* Space between the heatmap and scatter plot */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Each visualization for the bottom row */
+#heatmap, #scatter-plot {
+    width: 45%; /* Set equal width for heatmap and scatter plot */
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Overall body settings */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
