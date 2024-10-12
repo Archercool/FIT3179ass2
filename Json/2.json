@@ -4,7 +4,7 @@
     "height": 400,
     "title": "Top 10 Countries by Highest AQI Value",
     "data": {
-      "url": "globalairpollution.csv",
+      "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/Datasets/globalairpollution.csv",
       "format": {"type": "csv"}
     },
     "transform": [
