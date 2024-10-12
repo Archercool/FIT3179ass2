@@ -111,17 +111,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;  /* Ensure overlay is always on top */
 }
 
 /* Card styling (self-adaptive) */
 .card {
+    position: relative;  /* Ensure the close button can be positioned relative to the card */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 80%;
-    min-width: 200px;
+    width: auto;  /* Self-adaptive width based on content */
+    max-width: 80%;  /* Ensure the card does not exceed 80% of the viewport width */
+    min-width: 200px;  /* Set a minimum width so it doesn't become too small */
     text-align: center;
 }
 
