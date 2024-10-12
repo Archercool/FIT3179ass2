@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Top 10 Countries by Highest Ozone AQI Value",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/Datasets/globalairpollution.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "aggregate": [{
+          "op": "mean",  
+          "field": "Ozone AQI Value",
+          "as": "mean Ozone AQI Value"
+        }],
+        "groupby": ["Country"]  
+      },
+      {
+        "window": [{
+          "op": "rank",
+          "as": "rank"
+        }],
+        "sort": [{
+          "field": "mean Ozone AQI Value",
+          "order": "descending"
+        }]
+      },
+      {
+        "filter": "datum.rank <= 10"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "title": "Country",
+        "sort": "-y"  
+      },
+      "y": {
+        "field": "mean Ozone AQI Value",
+        "type": "quantitative",
+        "title": "mean Ozone AQI Value"
+      },
+      "color": {
+        "field": "Country",
+        "type": "nominal",
+        "legend": null
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "mean Ozone AQI Value", "type": "quantitative", "title": "Mean Ozone AQI Value"}
+      ]
+    }
+  }
+  
