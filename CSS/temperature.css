@@ -1,0 +1,145 @@
+/* Style for the text content at the top */
+#text-content {
+    text-align: center;
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 20px;
+    background-color: #f0f0f0; /* Slightly lighter background color */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%; /* Use 90% width for better appearance */
+    font-family: Arial, sans-serif; /* A clean, modern font */
+    color: #333; /* Darker text for better readability */
+}
+
+/* Ensure body content is centered horizontally and vertically */
+body {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start;  /* Align items from the top */
+    min-height: 100vh; /* Ensure the body covers the full height of the screen */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa; /* Light background color for the page */
+}
+
+/* Layout for the top two visualizations */
+#top-row {
+    display: flex;
+    justify-content: space-between; /* Space between the charts */
+    margin-bottom: 30px; /* Add space below the row */
+    width: 90%; /* Full width with some margin on the sides */
+}
+
+/* Each visualization for the top row */
+.viz {
+    width: 48%; /* Take up almost half of the row */
+    padding: 15px;
+    background-color: #fff; /* Clean white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    margin-bottom: 20px; /* Space below each chart */
+}
+
+/* Heatmap and Scatter Plot side by side */
+#bottom-row {
+    display: flex;
+    justify-content: space-between; /* Space between the charts */
+    width: 90%; /* Full width with some margin on the sides */
+    margin-top: 30px; /* Add space above the row */
+}
+
+/* Each visualization for the bottom row */
+#heatmap, #scatter-plot {
+    width: 48%; /* Equal width for both charts */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow effect */
+}
+
+/* Circular button container below the viz */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+/* Circular button */
+.circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.circle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Card overlay styling */
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure overlay is always on top */
+}
+
+/* Card styling (self-adaptive) */
+.card {
+    position: relative;  /* Ensure the close button can be positioned relative to the card */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;  /* Self-adaptive width based on content */
+    max-width: 80%;  /* Ensure the card does not exceed 80% of the viewport width */
+    min-width: 200px;  /* Set a minimum width so it doesn't become too small */
+    text-align: center;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Style for the "Return to Homepage" button container */
+.home-button-container {
+    position: fixed;
+    top: 40px;    /* Adjust the distance from the top of the page */
+    right: 80px;  /* Increase the distance from the right edge of the page */
+    z-index: 1000;  /* Ensure the button stays on top of other elements */
+}
+
+/* Style for the "Return to Homepage" button */
+.home-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;  /* Blue background */
+    color: white;  /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;  /* Add a smooth color transition */
+}
+
+.home-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
