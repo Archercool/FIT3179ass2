@@ -6,39 +6,52 @@
     background-color: #f0f0f0; /* Slightly lighter background color */
     border-radius: 10px; /* Rounded corners for a smoother look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 90%; /* Slightly less than full width for a better appearance */
+    width: 90%; /* Use 90% width for better appearance */
     font-family: Arial, sans-serif; /* A clean, modern font */
     color: #333; /* Darker text for better readability */
+}
+
+/* Ensure body content is centered horizontally and vertically */
+body {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start;  /* Align items from the top */
+    min-height: 100vh; /* Ensure the body covers the full height of the screen */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa; /* Light background color for the page */
 }
 
 /* Layout for the top two visualizations */
 #top-row {
     display: flex;
-    justify-content: space-between; /* Better spacing between charts */
-    margin-bottom: 30px; /* Increased margin for spacing below the row */
-    width: 90%; /* Adjusted width for better alignment */
+    justify-content: space-between; /* Space between the charts */
+    margin-bottom: 30px; /* Add space below the row */
+    width: 90%; /* Full width with some margin on the sides */
 }
 
 /* Each visualization for the top row */
 .viz {
-    width: 48%; /* Adjusted width to make visualizations a bit larger */
+    width: 48%; /* Take up almost half of the row */
     padding: 15px;
     background-color: #fff; /* Clean white background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    margin-bottom: 20px; /* Space below each chart */
 }
 
 /* Heatmap and Scatter Plot side by side */
 #bottom-row {
     display: flex;
-    justify-content: space-between; /* Even spacing between heatmap and scatter plot */
-    width: 90%; /* Adjusted width for alignment */
-    margin-top: 30px;
+    justify-content: space-between; /* Space between the charts */
+    width: 90%; /* Full width with some margin on the sides */
+    margin-top: 30px; /* Add space above the row */
 }
 
 /* Each visualization for the bottom row */
 #heatmap, #scatter-plot {
-    width: 48%; /* Set equal width for heatmap and scatter plot */
+    width: 48%; /* Equal width for both charts */
     padding: 15px;
     background-color: #fff;
     border-radius: 10px;
@@ -90,9 +103,9 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 80%;
-    min-width: 200px;
+    width: auto;  /* Self-adaptive width based on content */
+    max-width: 80%;  /* Ensure the card does not exceed 80% of the viewport width */
+    min-width: 200px;  /* Set a minimum width so it doesn't become too small */
     text-align: center;
 }
 
