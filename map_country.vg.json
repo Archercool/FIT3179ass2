@@ -26,7 +26,7 @@
     },
     {
       "data": {
-        "url": "https://github.com/Archercool/FIT3179ass2/blob/main/datasets/GlobalWeatherRepository.csv",
+        "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/datasets/GlobalWeatherRepository.csv",
         "format": {"type": "csv"}
       },
       "transform": [
