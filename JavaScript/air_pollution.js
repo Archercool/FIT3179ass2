@@ -23,7 +23,8 @@ var textContent = document.createElement('div');
 textContent.id = 'text-content';
 textContent.innerHTML = 
     `<h1>Global Air Quality Visualisation</h1>
-     <p>Data based on various cities around the world</p>`;
+     <p>Multi-dimensional display of air pollution in various countries, including the distribution and changing trends of ozone and AQI values</p>
+     <p>Data source: https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset?resource=download</p>`;
 document.body.prepend(textContent);
 
 // Create the top row for the first two visualizations (map and bubble plot)
