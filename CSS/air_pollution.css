@@ -124,3 +124,27 @@ body {
     min-width: 200px;
     text-align: center;
 }
+
+/* Style for the "Return to Homepage" button container */
+.home-button-container {
+    position: fixed;
+    top: 40px;    /* Adjust the distance from the top of the page */
+    right: 80px;  /* Increase the distance from the right edge of the page */
+    z-index: 1000;  /* Ensure the button stays on top of other elements */
+}
+
+/* Style for the "Return to Homepage" button */
+.home-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;  /* Blue background */
+    color: white;  /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;  /* Add a smooth color transition */
+}
+
+.home-button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
