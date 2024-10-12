@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A heatmap showing temperature data across different locations.",
+    "width": 600,
+    "height": 500,
+    "title": "Global Temperature Heatmap",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/datasets/GlobalWeatherRepository.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "calculate": "toNumber(substring(datum.last_updated, 5, 7))",
+        "as": "month_extracted"
+      },
+      {
+        "filter": "datum.month_extracted == month_selection"
+      }
+    ],
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "longitude",
+        "bin": {"maxbins": 40},
+        "title": "Longitude"
+      },
+      "y": {
+        "field": "latitude",
+        "bin": {"maxbins": 40},
+        "title": "Latitude"
+      },
+      "color": {
+        "field": "temperature_celsius",
+        "aggregate": "mean",
+        "type": "quantitative",
+        "title": "Average Temperature (°C)",
+        "scale": {
+          "scheme": "redblue",
+          "domain": [-20, 50] 
+        }
+      },
+      "tooltip": [
+        {"field": "longitude", "type": "quantitative", "title": "Longitude"},
+        {"field": "latitude", "type": "quantitative", "title": "Latitude"},
+        {"field": "temperature_celsius", "type": "quantitative", "title": "Avg Temperature (°C)"}
+      ]
+    },
+    "params": [
+      {
+        "name": "month_selection",
+        "value": 5,
+        "bind": {
+          "input": "select",
+          "options": [5, 6, 7, 8, 9],
+          "labels": ["May", "Jun", "Jul", "Aug", "Sep"],
+          "name": "Select Month: "
+        }
+      }
+    ]
+  }
+  
