@@ -1,0 +1,126 @@
+/* Style for the text content at the top */
+#text-content {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Ensure body content is centered */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Ensure everything is centered vertically */
+    background-color: #fafafa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100vw;  /* Ensure the body takes full width */
+}
+
+/* Layout for the top two visualizations */
+#top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 90%;  /* 90% width of the screen without limiting the maximum width */
+}
+
+/* Each visualization for the top row */
+.viz {
+    position: relative;
+    width: 48%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Heatmap and Scatter Plot side by side */
+#bottom-row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;  /* 90% width of the screen */
+    margin-top: 30px;
+}
+
+/* Each visualization for the bottom row */
+#map3, #map4 {
+    width: 48%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout for the new two visualizations at the bottom */
+#additional-row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;  /* 90% width of the screen */
+    margin-top: 30px;
+}
+
+/* Each visualization for the additional row */
+#viz5, #viz6 {
+    width: 48%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular button container below the viz */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+/* Circular button */
+.circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.circle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Card overlay styling */
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling (self-adaptive) */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 80%;
+    min-width: 200px;
+    text-align: center;
+}
