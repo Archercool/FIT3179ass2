@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "Scatter Plot of AQI Value by Category with Selection",
+    "data": {
+      "url": "globalairpollution.csv",
+      "format": {"type": "csv"}
+    },
+    "params": [
+      {
+        "name": "categorySelection",
+        "value": "All",
+        "bind": {
+          "input": "select",
+          "options": ["All", "Good", "Moderate", "Unhealthy for Sensitive Groups", "Unhealthy", "Very Unhealthy", "Hazardous"],
+          "name": "Select AQI Category: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "categorySelection == 'All' || datum['AQI Category'] == categorySelection"
+      }
+    ],
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "AQI Category",
+        "type": "nominal",
+        "title": "AQI Category"
+      },
+      "y": {
+        "field": "AQI Value",
+        "type": "quantitative",
+        "title": "AQI Value"
+      },
+      "color": {
+        "field": "AQI Category",
+        "type": "nominal",
+        "title": "AQI Category"
+      },
+      "size": {
+        "field": "AQI Value",
+        "type": "quantitative",
+        "title": "Size by AQI"
+      },
+      "tooltip": [
+        {"field": "City", "type": "nominal", "title": "City"},
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "AQI Value", "type": "quantitative", "title": "AQI Value"}
+      ]
+    }
+  }
+  
