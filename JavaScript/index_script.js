@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         type();
     }
 
-    typeText("temperature-text", temperatureText, 5);
-    typeText("pollution-text", pollutionText, 5);
+    typeText("temperature-text", temperatureText, 2);
+    typeText("pollution-text", pollutionText, 2);
 });
