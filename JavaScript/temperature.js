@@ -104,7 +104,7 @@ function showCard(message) {
 }
 
 // Add buttons to all visualizations with a specific message
-addButtonBelowViz('map', 'This is the global temperature map.');
+addButtonBelowViz('map', 'The color legend on the right shows that the temperature ranges from 0°C to 50°C, with the temperature color gradually transitioning from blue (low temperature) to red (high temperature). The size and color of the circles represent different temperature levels. Geographic distribution: The dots in the chart cover all parts of the world, and the temperature changes in different locations are obvious. The Middle East, North Africa and some countries near the Sahara Desert are red, indicating that the temperatures in these areas are between 40°C and 50°C, showing extreme high temperatures. The temperatures in parts of South America, Southeast Asia and Australia are relatively high, but are generally more uniform, mostly between 20°C and 30°C. The global temperature distribution is roughly in line with the expectation of seasonal changes, with high temperatures in tropical regions concentrated near the equator and temperate regions showing more moderate temperatures. It is worth noting that the temperatures in central Africa, the Indian subcontinent and the Middle East are particularly high, reflecting the hot weather in these regions in May.');
 addButtonBelowViz('temperature-bubble-plot', 'This is the temperature bubble plot.');
 addButtonBelowViz('heatmap', 'This is the temperature heatmap.');
 addButtonBelowViz('scatter-plot', 'This is the wind scatter plot.');
