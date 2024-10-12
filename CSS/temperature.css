@@ -1,0 +1,108 @@
+/* Style for the text content at the top */
+#text-content {
+    text-align: center;
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 20px;
+    background-color: #f0f0f0; /* Slightly lighter background color */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%; /* Slightly less than full width for a better appearance */
+    font-family: Arial, sans-serif; /* A clean, modern font */
+    color: #333; /* Darker text for better readability */
+}
+
+/* Layout for the top two visualizations */
+#top-row {
+    display: flex;
+    justify-content: space-between; /* Better spacing between charts */
+    margin-bottom: 30px; /* Increased margin for spacing below the row */
+    width: 90%; /* Adjusted width for better alignment */
+}
+
+/* Each visualization for the top row */
+.viz {
+    width: 48%; /* Adjusted width to make visualizations a bit larger */
+    padding: 15px;
+    background-color: #fff; /* Clean white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+}
+
+/* Heatmap and Scatter Plot side by side */
+#bottom-row {
+    display: flex;
+    justify-content: space-between; /* Even spacing between heatmap and scatter plot */
+    width: 90%; /* Adjusted width for alignment */
+    margin-top: 30px;
+}
+
+/* Each visualization for the bottom row */
+#heatmap, #scatter-plot {
+    width: 48%; /* Set equal width for heatmap and scatter plot */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow effect */
+}
+
+/* Circular button container below the viz */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+/* Circular button */
+.circle-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.circle-button:hover {
+    background-color: #0056b3;
+}
+
+/* Card overlay styling */
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure overlay is always on top */
+}
+
+/* Card styling (self-adaptive) */
+.card {
+    position: relative;  /* Ensure the close button can be positioned relative to the card */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 80%;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
