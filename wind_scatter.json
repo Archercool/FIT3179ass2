@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Scatter plot of wind speed and direction, highlighting based on city name search",
+  "width": 800,
+  "height": 400,
+  "title": "Wind Scatter Plot",
+  "data": {
+    "url": "https://github.com/Archercool/FIT3179ass2/blob/main/datasets/GlobalWeatherRepository.csv"
+  },
+  "params": [
+    {
+      "name": "cityHighlight",
+      "value": "",
+      "bind": {
+        "input": "text",
+        "placeholder": "Search City"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "cityHighlight === '' || indexof(lower(datum.country), lower(cityHighlight)) >= 0"
+    }
+  ],
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "longitude",
+      "type": "quantitative",
+      "title": "Longitude"
+    },
+    "y": {
+      "field": "latitude",
+      "type": "quantitative",
+      "title": "Latitude"
+    },
+    "size": {
+      "field": "wind_mph",
+      "type": "quantitative",
+      "title": "Wind Speed (mph)"
+    },
+    "color": {
+      "field": "wind_direction",
+      "type": "nominal",
+      "title": "Wind Direction"
+    },
+    "tooltip": [
+      {"field": "country", "type": "nominal", "title": "country"},
+      {"field": "wind_mph", "type": "quantitative", "title": "Wind Speed (mph)"},
+      {"field": "wind_kph", "type": "quantitative", "title": "Wind Speed (kph)"},
+      {"field": "wind_direction", "type": "nominal", "title": "Wind Direction"},
+      {"field": "wind_degree", "type": "quantitative", "title": "Wind Degree"}
+    ]
+  }
+}

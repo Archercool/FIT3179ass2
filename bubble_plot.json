@@ -4,7 +4,7 @@
     "height": 600,
     "title": "Global Temperature bubble plot",
     "data": {
-      "url": "GlobalWeatherRepository.csv"
+      "url": "https://github.com/Archercool/FIT3179ass2/blob/main/datasets/GlobalWeatherRepository.csv"
     },
     "params": [
       {
