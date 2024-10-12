@@ -92,10 +92,10 @@ scatterPlotDiv.id = 'scatter-plot';
 bottomRow.appendChild(scatterPlotDiv);
 
 // Import JSON configuration files for static visualizations
-var vg_1 = "map_country.vg.json";
-var vg_2 = "bubble_plot.json";
-var vg_3 = "heatmap.json";  // The new heatmap JSON file
-var vg_4 = "wind_scatter.json"; // Wind scatter plot JSON file
+var vg_1 = "Json/map_country.vg.json";
+var vg_2 = "Json/bubble_plot.json";
+var vg_3 = "Json/heatmap.json";  // The new heatmap JSON file
+var vg_4 = "Json/wind_scatter.json"; // Wind scatter plot JSON file
 
 // Embed the original map with adjusted size (static)
 vegaEmbed("#map", vg_1, {width: 700, height: 500}).then(function(result) {
