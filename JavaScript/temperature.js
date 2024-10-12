@@ -22,8 +22,9 @@ addReturnToHomeButton();
 var textContent = document.createElement('div');
 textContent.id = 'text-content';
 textContent.innerHTML = 
-    `<h1>Data Visualisation II</h1>
-     <p>Aoran Li</p>`;
+    `<h1>Global Temperature Data Visualisation</h1>
+     <p>The interactive chart shows the distribution and change trend of temperature, wind speed and other data in various places from May to September 2024.</p>
+     <p>Data source: https://www.kaggle.com/datasets/nelgiriyewithana/global-weather-repository</p>`;
 document.body.prepend(textContent);
 
 // Create the top row for the first two visualizations (map and bubble plot)
