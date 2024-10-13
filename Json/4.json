@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 400,
-    "title": "Scatter Plot of AQI Value by Category with Selection",
+    "title": "Scatter Plot of Ozone AQI Value by Category with Selection",
     "data": {
       "url": "https://raw.githubusercontent.com/Archercool/FIT3179ass2/refs/heads/main/Datasets/globalairpollution.csv",
       "format": {"type": "csv"}
